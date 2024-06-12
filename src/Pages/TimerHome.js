@@ -4,6 +4,7 @@ import Timer from '../Components/Timer'
 
 const TimerHome = () => {
     const [timerList, setTimerList] = useState([])
+    const [count, setCount] = useState(1)
 
     const removeTimer = (e) => {
         let id = e.target.getAttribute('id')
@@ -12,7 +13,8 @@ const TimerHome = () => {
     }
 
     const addTimer = () => {
-        let id = "timer" + String(timerList.length + 1)
+        let id = "timer-" + count
+        setCount(cnt => cnt + 1)
         let obj = {
             id: id,
             timer: <><Timer id = {id} /></>
