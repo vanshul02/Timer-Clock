@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import Timer from '../Components/Timer'
+import Timer from '../../Components/Timer/Timer'
 
 
 const TimerHome = () => {
@@ -17,7 +17,7 @@ const TimerHome = () => {
         setCount(cnt => cnt + 1)
         let obj = {
             id: id,
-            timer: <><Timer id = {id} /></>
+            timer: <><Timer id={id} /></>
         }
         setTimerList(prevTimerList => [...prevTimerList, obj])
     }
@@ -26,9 +26,9 @@ const TimerHome = () => {
         <>
             <input type="button" className="add-timer-btn" onClick={addTimer} value="Add Timer" />
             <div>{timerList.map(entry =>
-                <div key = {entry.id}>
+                <div key={entry.id}>
                     {entry.timer}
-                    <input id = {entry.id} type="button" className="remove-timer-btn" onClick={removeTimer} value="Remove Timer" />
+                    <input id={entry.id} type="button" className="remove-timer-btn" onClick={removeTimer} value="Remove Timer" />
                 </div>
             )}
             </div>

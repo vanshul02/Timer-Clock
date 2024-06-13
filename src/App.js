@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Pages/Home';
-import TimerHome from './Pages/TimerHome';
-import WorldClock from './Pages/WorldClock';
-import NavBar from './Components/NavBar';
+import Home from './Pages/Home/Home';
+import TimerHome from './Pages/TimerHome/TimerHome';
+import WorldClock from './Pages/WorldClock/WorldClock';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
   return (
