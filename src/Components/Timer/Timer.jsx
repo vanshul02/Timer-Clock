@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from 'react'
+import './Timer.css'
 
 
 const Timer = (props) => {
@@ -60,10 +61,10 @@ const Timer = (props) => {
     return (
         <>
             <div className='timer-parent'>
-                <label>HH</label><input type="number" className='timer' value={hours} maxLength={2} onChange={hoursHandler} />
-                <label>MM</label><input type="number" className='timer' value={minutes} maxLength={2} onChange={minutesHandler} />
-                <label>SS</label><input type="number" className='timer' value={seconds} maxLength={2} onChange={secondsHandler} />
-                <input type="submit" value={isRunning && (seconds > 0 || minutes > 0 || hours > 0) ? "Pause" : "Start"} onClick={isRunningHandler} />
+                <label>HH</label><input type="number" className='timer-input' value={hours} maxLength={2} onChange={hoursHandler} />
+                <label>MM</label><input type="number" className='timer-input' value={minutes} maxLength={2} onChange={minutesHandler} />
+                <label>SS</label><input type="number" className='timer-input' value={seconds} maxLength={2} onChange={secondsHandler} />
+                <input className='timer-run-btn' type="submit" value={isRunning && (seconds > 0 || minutes > 0 || hours > 0) ? "Pause" : "Start"} onClick={isRunningHandler} />
             </div>
         </>
     )

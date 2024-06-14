@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import axios from 'axios'
+import './WorldClock.css'
 
 import TimeZoneSelector from '../../Components/TimeZoneSelector/TimeZoneSelector'
 
@@ -67,9 +68,9 @@ const WorldClock = () => {
   const renderTime = () => {
     if (date !== null && hours !== null && minutes !== null && seconds !== null) {
       return (
-        <div>
-          <div>{hours} : {minutes} : {seconds}</div>
-          <div>{date}</div>
+        <div className='date-time-container'>
+          <div className='time-container'>Time: {hours} : {minutes} : {seconds}</div>
+          <div className='date-container'>Date: {date}</div>
         </div>
       )
     }
@@ -77,8 +78,12 @@ const WorldClock = () => {
 
   return (
     <>
-      <TimeZoneSelector handler={timeZoneHandler} />
-      {renderTime()}
+      <div className="clock-container-parent">
+        <div className="clock-container">
+          <TimeZoneSelector handler={timeZoneHandler} />
+          {renderTime()}
+        </div>
+      </div>
     </>
   )
 }

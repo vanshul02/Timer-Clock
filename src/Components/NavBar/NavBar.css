@@ -1,0 +1,25 @@
+.navbar {
+    margin: 0.5rem 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        margin-right: 2.5rem;
+        font-size: large;
+        text-decoration: none;
+    }
+
+    button {
+        padding: 0.5rem 2.5rem;
+        color: white;
+        border: 1px solid blue;
+        background-color: transparent;
+    }
+
+    button:hover {
+        background-color: darkblue;
+        cursor: pointer;
+    }
+}

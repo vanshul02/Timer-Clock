@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import './TimerHome.css'
 import Timer from '../../Components/Timer/Timer'
 
 
@@ -22,15 +23,24 @@ const TimerHome = () => {
         setTimerList(prevTimerList => [...prevTimerList, obj])
     }
 
+    const removeAllTimerHandler = () => {
+        setTimerList([])
+    }
+
     return (
         <>
-            <input type="button" className="add-timer-btn" onClick={addTimer} value="Add Timer" />
-            <div>{timerList.map(entry =>
-                <div key={entry.id}>
-                    {entry.timer}
-                    <input id={entry.id} type="button" className="remove-timer-btn" onClick={removeTimer} value="Remove Timer" />
+            <div className='timer-home-content'>
+                <div className="add-timer-container">
+                    <input type="button" className="timer-support-btn" onClick={addTimer} value="Add Timer" />
+                    <input type="button" className="timer-support-btn" onClick={removeAllTimerHandler} value="Remove All Timers" />
                 </div>
-            )}
+                <div className='timer-list-box'>{timerList.map(entry =>
+                    <div key={entry.id} className='timer-container'>
+                        {entry.timer}
+                        <input id={entry.id} type="button" className="remove-timer-btn" onClick={removeTimer} value="Remove Timer" />
+                    </div>
+                )}
+                </div>
             </div>
         </>
     )

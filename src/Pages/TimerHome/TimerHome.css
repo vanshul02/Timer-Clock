@@ -1,0 +1,45 @@
+.timer-home-content {
+    margin-top: 5rem;
+    margin-left: 27%;
+}
+
+.timer-list-box {
+    height: 70%;
+    width: 45%;
+    position: absolute;
+    border: 1px solid white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-timer-container {
+    text-align: right;
+    margin-right: 38.2%;
+}
+
+.timer-support-btn {
+    width: 20%;
+    padding: 0.5rem;
+    border-radius: 5%;
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    background-color: darkblue;
+    border: 0;
+    color: white;
+}
+
+.timer-container {
+    background-color: rgb(26, 26, 26);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.2rem 0.5rem;
+}
+
+.remove-timer-btn {
+    background-color: darkblue;
+    color: white;
+    border: 0;
+}

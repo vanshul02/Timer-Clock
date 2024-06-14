@@ -1,0 +1,27 @@
+.timer-parent {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.timer-run-btn {
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    width: 12%;
+}
+
+.timer-input {
+    width: 8%;
+    padding: 0.2rem;
+    font-size: large;
+    border: 0;
+    outline: none;
+    font-weight: 800;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
