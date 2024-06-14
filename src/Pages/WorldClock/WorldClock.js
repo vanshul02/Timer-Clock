@@ -34,7 +34,7 @@ const WorldClock = () => {
       setHours(timeArray[0])
       setMinutes(timeArray[1])
       setSeconds(timeArray[2])
-    })
+    }).catch(err => console.log(err))
   }
 
   const timeZoneHandler = async (ele) => {

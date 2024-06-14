@@ -12,7 +12,7 @@ const TimeZoneSelector = (props) => {
                 let timeZones = resp.data
                 setTimeZoneList(timeZones)
             }
-        )
+        ).catch(err => console.log(err))
     }, [])
     return (
         <>
