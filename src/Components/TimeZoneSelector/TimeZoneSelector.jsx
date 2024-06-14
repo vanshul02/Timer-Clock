@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
-import ListSelector from '../../Components/ListSelector/ListSelector'
+import ListSelector from '../ListSelector/ListSelector'
 
 const TimeZoneSelector = (props) => {
     const [timeZoneList, setTimeZoneList] = useState([])
