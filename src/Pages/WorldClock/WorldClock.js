@@ -1,29 +1,27 @@
 import { React, useEffect, useState } from 'react'
 import axios from 'axios'
 
-const WorldClock = () => {
-  const [timeZoneList, setTimeZoneList] = useState([])
+import TimeZoneSelector from '../../Components/TimeZoneSelector/TimeZoneSelector'
 
-  useEffect(() => {
-    axios.get("https://worldtimeapi.org/api/timezone/").then(
-      resp => {
-        console.log(resp.data)
-        let timeZones = resp.data
-        setTimeZoneList(timeZones)
-      }
-    )
-  }, [])
+
+const WorldClock = () => {
+
+  const [date, setDate] = useState(null)
+
+  const timeZoneHandler = async (ele) => {
+    let selectedTimeZone = ele.currentTarget.value
+    let url = "https://worldtimeapi.org/api/timezone/" + selectedTimeZone
+    await axios.get(url).then(response => {
+      console.log(response.data)
+      const fetchedDate = Date.parse(response.data.datetime)
+      setDate(fetchedDate)
+    })
+  }
+
   return (
     <>
-      <div className='time-zone-selector'>
-        <select name="time-zone" id="time-zone-select">
-          {
-            timeZoneList.map(timeZone =>
-              <option value={timeZone}>{timeZone}</option>
-            )
-          }
-        </select>
-      </div>
+      <TimeZoneSelector handler={timeZoneHandler} />
+      <div>{date !== null ? date : null}</div>
     </>
   )
 }
