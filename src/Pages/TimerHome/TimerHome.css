@@ -43,3 +43,32 @@
     color: white;
     border: 0;
 }
+
+@media only screen and (max-width: 1024px) {
+    .timer-home-content {
+        margin-left: 0%;
+    }
+
+    .timer-list-box {
+        width: 100%;
+    }
+
+    .timer-support-btn {
+        width: 40%;
+    }
+
+    .add-timer-container {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .timer-container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        margin: 0.2rem 0.2rem;
+    }
+}

@@ -29,3 +29,9 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .timer-run-btn {
+        width: 17%;
+    }
+}

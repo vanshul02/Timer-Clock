@@ -3,7 +3,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     a {
         margin-right: 2.5rem;
